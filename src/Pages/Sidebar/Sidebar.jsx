@@ -7,6 +7,9 @@ function Sidebar(){
             <nav>
                 <ul>
                     <li>
+                        <NavLink to="/installation">Installation</NavLink>
+                    </li>
+                    <li>
                         <NavLink to="/statehooks">Built-in React Hooks</NavLink>
                     </li>
                     <li>
@@ -17,6 +20,9 @@ function Sidebar(){
                     </li>   
                     <li>
                         <NavLink to="/about">About</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/thinking">Thinking</NavLink>
                     </li>
                     <li>
                         <NavLink to="/users">Users</NavLink>

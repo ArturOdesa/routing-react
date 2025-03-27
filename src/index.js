@@ -12,15 +12,19 @@ import ErrorPage from './Pages/ErrorPage/ErrorPage.jsx';
 import Users from './Pages/Users/Users.jsx';
 import User from './Pages/Users/User.jsx';
 import { userLoader } from './loaders/userLoader.js';
+import Installation from './Pages/Installation/Installation.js';
+import Thinking from './Pages/Thinking/Thinking.js'
 
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path='/' element={<Root />}>
             <Route index element={<Welcome />} />
+            <Route path='installation' element={<Installation />} />
             <Route path='statehooks' element={<StateHook />} />
             <Route path='community' element={<Community />} />
             <Route path='resources' element={<Resources />} />
             <Route path='about' element={<About />} />
+            <Route path='thinking' element={<Thinking />} />
             <Route path='users' element={<Users />} />
             <Route path='users/:id' loader={userLoader} element={<User />} errorElement={<ErrorPage />} />
             <Route path='*' element={<ErrorPage />} />
@@ -35,6 +39,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <RouterProvider router={router} future={{v7_startTransition: true,}}/>
 );
+
+
 
 
 
