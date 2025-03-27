@@ -11,9 +11,12 @@ import About from './Pages/About/About.js';
 import ErrorPage from './Pages/ErrorPage/ErrorPage.jsx';
 import Users from './Pages/Users/Users.jsx';
 import User from './Pages/Users/User.jsx';
-import { userLoader } from './loaders/userLoader.js';
+import { usersLoader } from './loaders/usersLoader.js';
+import { userDetailsLoader } from './loaders/userDetailsLoader.js';
 import Installation from './Pages/Installation/Installation.js';
 import Thinking from './Pages/Thinking/Thinking.js'
+import UsersLoadError from './Pages/UsersLoadError/UsersLoadError.jsx';
+import UserDetailsError from './Pages/UserDetailsError/UserDetailsError.jsx';
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -25,8 +28,8 @@ const router = createBrowserRouter(
             <Route path='resources' element={<Resources />} />
             <Route path='about' element={<About />} />
             <Route path='thinking' element={<Thinking />} />
-            <Route path='users' element={<Users />} />
-            <Route path='users/:id' loader={userLoader} element={<User />} errorElement={<ErrorPage />} />
+            <Route path='users' element={<Users />} loader={usersLoader} errorElement={<UsersLoadError />} />
+            <Route path='users/:id' loader={userDetailsLoader} element={<User />} errorElement={<UserDetailsError />} />
             <Route path='*' element={<ErrorPage />} />
         </Route>
     ),

@@ -11,8 +11,9 @@ const User = () => {
             </div>
             <h2>{user.name}</h2>
             <h3>Email: {user.email}</h3>
-            <h3>Age: {user.age}</h3>
-            <img src={user.img} alt="avatar" />
+            <h3>Phone: {user.phone}</h3>
+            <address>Address: {user.address.city}, {user.address.street}, {user.address.suite}</address>
+            <p>Company: {user.company.name}</p>
         </div>
     )
 }

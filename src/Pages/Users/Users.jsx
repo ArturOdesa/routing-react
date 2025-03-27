@@ -1,8 +1,9 @@
 import React from "react";
-import users from '../../data/users.json'
-import { Link } from "react-router-dom";
+// import users from '../../data/users.json'
+import { Link, useLoaderData } from "react-router-dom";
 
 const Users = () => {
+    const users = useLoaderData();
     return (
         <div className="Main">
             <h1>Users</h1>
